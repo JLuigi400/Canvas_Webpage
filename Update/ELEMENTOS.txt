@@ -1,0 +1,111 @@
+// ATENCIÓN: FALTANTE DE RECURSO VISUAL
+// El archivo 'gallery.png' no existe en 'Recursos/Imagenes/Icon/'.
+// Es necesario agregar una imagen con ese nombre para que el ícono de la galería se muestre correctamente en el menú principal (index.html).
+// Si mueves el proyecto a otro computador, recuerda añadir este archivo o reemplazar la referencia en el HTML/CSS.
+// Puedes usar un ícono temporal o descargar uno de https://icons8.com/icons/set/gallery o similar.
+// Ejemplo de ruta esperada: Recursos/Imagenes/Icon/gallery.png
+//
+// Otros íconos requeridos para el menú principal y herramientas SÍ están presentes.
+// Revisa este archivo antes de migrar el proyecto para evitar imágenes rotas.
+
+ELEMENTOS DEL PROYECTO LINEART & COLOR
+======================================
+
+Resumen actualizado de lo que hace cada página principal y sus archivos asociados (25/mayo/2025):
+
+---
+
+1. **index.html**
+   - Página de inicio y bienvenida.
+   - Muestra opciones principales del sistema en un menú visual tipo grid (2 columnas, 3 filas en desktop, 1 columna en móvil).
+   - Cada opción es un recuadro horizontal con icono a la izquierda y resumen a la derecha, efecto hover y responsivo.
+   - Nav profesional con sección activa.
+   - CSS: estandar.css, menu.css
+   - JS: (no requiere JS propio)
+
+2. **login.html**
+   - Formulario de inicio de sesión de usuario.
+   - Validación visual y mensajes de error.
+   - CSS: data.css
+   - JS: login.js
+
+3. **signup.html**
+   - Formulario de registro de usuario.
+   - Validación visual y mensajes de error.
+   - CSS: data.css
+   - JS: signup.js
+
+4. **gallery.html**
+   - Galería de imágenes tipo Instagram.
+   - Muestra imágenes de ejemplo para invitados y solo imágenes propias para usuarios logueados.
+   - Modal para ver imágenes ampliadas.
+   - Botón para subir imágenes a la galería.
+   - Nav profesional con sección activa.
+   - CSS: gallery.css, estandar.css
+   - JS: gallery.js, formulario.js
+
+5. **gallery_admin.html**
+   - Galería personalizada para el usuario admin/prueba.
+   - Mismas funciones que gallery.html pero con lógica de usuario logueado.
+   - Nav profesional con sección activa.
+   - CSS: gallery.css, estandar.css
+   - JS: gallery.js, formulario.js
+
+6. **canvas.html**
+   - Editor de pintura digital con herramientas (brocha, borrador, figuras, stickers).
+   - Paneles laterales scrolleables, botones de filtros, descarga, limpieza y subida a galería.
+   - Permite cargar imágenes de referencia y drag & drop.
+   - Nav profesional con sección activa.
+   - CSS: canvas.css, estandar.css, menu.css
+   - JS: canvas.js, formulario.js, recursos.js
+
+7. **game.html, game.css, game.js**
+   - Se implementó el minijuego Luigi Tower Jump con Phaser 3.
+   - Nav profesional con clase active y footer consistente, igual que el resto del sitio.
+   - Se agregó un contenedor principal para el juego y un modal de instrucciones accesible desde el botón "Instrucciones".
+   - Se muestran controles visuales y animaciones de movimiento de Luigi en el modal.
+   - Iconos de música y pausa interactivos, con lógica de control en JS.
+   - Experiencia de usuario consistente: usuario dinámico, botones de login/signup/logout, y actualización visual del usuario.
+   - game.css contiene estilos exclusivos para el área de juego, responsivo y visualmente integrado.
+   - game.js gestiona la lógica del juego, animaciones, puntaje, plataformas, música, pausa y eventos de usuario.
+
+8. **contacto.html**
+   - Página de contacto y créditos del proyecto.
+   - Muestra información de la compañía, creador y elementos usados (Nintendo), en filas alternadas con imágenes.
+   - Diseño amigable, paleta jade/verde Luigi, imágenes alternando izquierda/derecha.
+   - Contenedor principal con ancho extendido (wrapper exclusivo) alineado con header y footer.
+   - Nav profesional y footer idénticos al resto de páginas principales, con sección activa.
+   - CSS: estandar.css (con reglas exclusivas para contacto)
+   - No requiere JS propio
+
+---
+
+**Notas:**
+- Todos los navs (excepto login/signup) muestran la sección activa con la clase CSS correspondiente.
+- El footer está siempre visible y no tapa contenido.
+- Los paneles laterales del canvas permiten scroll para acceder a todos los botones.
+- El menú principal (index) es visual, responsivo y con recuadros horizontales.
+- El sistema es portable: puedes mover la carpeta completa a otra computadora y funcionará igual.
+
+---
+
+**Cambios recientes (26/mayo/2025):**
+- Nav profesional y footer replicados en todas las páginas principales (excepto login/signup), con clase active.
+- Footer siempre visible y consistente.
+- Menú principal (index.html) visual tipo grid, responsivo, con recuadros horizontales, icono a la izquierda y resumen a la derecha, efecto hover.
+- Validación visual y mensajes claros en login/signup.
+- Galería personalizada: invitados ven ejemplos, usuarios logueados ven solo sus imágenes.
+- Botón "Subir a galería" solo para usuarios logueados.
+- Modal para ver imágenes ampliadas en galería.
+- Paneles laterales del canvas scrolleables.
+- Wrapper exclusivo en contacto.html alineado con header/footer.
+- Advertencia: falta el ícono gallery.png en Recursos/Imagenes/Icon/.
+- Portabilidad: documentación y estructura lista para migrar o subir a GitHub.
+- Lógica y experiencia de usuario replicada del juego a otras secciones donde aplica.
+
+---
+
+**Para portabilidad:**
+- Lleva contigo este archivo, README.txt e HISTORIAL.txt para saber el estado y estructura del proyecto.
+- Si cambias de PC, solo copia la carpeta completa y sigue trabajando.
+- Si usas LocalStorage para usuarios, revisa README.txt para consejos de exportación/importación.

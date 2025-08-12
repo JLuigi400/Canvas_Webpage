@@ -1,0 +1,85 @@
+/* gallery.css - Estilos exclusivos para la galería tipo Instagram y su modal */
+
+/* ====== GALERÍA ESTILO INSTAGRAM ====== */
+/* Estilos para la galería tipo Instagram y modal de imágenes */
+
+/* Título de la galería */
+.gallery-title {
+    text-align: center;
+    color: #417B5A;
+    margin: 24px 0 16px 0;
+    font-size: 2em;
+}
+
+/* Grilla de imágenes (4 columnas, responsive) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas por fila */
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 16px;
+}
+
+/* Recuadro de cada imagen en la galería */
+.gallery-item {
+    background: #eafff2;
+    border: 3px solid #1fa463;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #b88a4a22;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+.gallery-item:hover {
+    box-shadow: 0 0 0 4px #ffd16699;
+    border-color: #e94f37;
+}
+
+/* Imagen dentro del recuadro, efecto hover */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+    /* Al hacer hover, la imagen se agranda pero el recuadro no */
+}
+.gallery-item:hover img {
+    transform: scale(1.18);
+    z-index: 2;
+    box-shadow: 0 4px 24px #b88a4a55;
+}
+
+/* Modal para ver imagen ampliada */
+.modal-view {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+.modal-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+#modal-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 0 32px #000a;
+    background: #fff;
+    padding: 8px;
+}

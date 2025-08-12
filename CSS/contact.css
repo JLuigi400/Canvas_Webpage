@@ -1,0 +1,82 @@
+/* ====== CONTACT.CSS ====== */
+/* Estilos exclusivos para la página de contacto (contacto.html) */
+
+body.contacto {
+    background: linear-gradient(135deg, #b6f5c9 0%, #6edc8c 100%);
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    color: #222;
+}
+
+.wrapper-contacto {
+    width: 98%;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px 0;
+    padding: 32px 24px;
+    background: #eafff2;
+    border-radius: 24px;
+    box-shadow: 0 0 24px #6edc8c55;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding: 24px 0;
+    border-radius: 18px;
+    background: #d2ffe1;
+    box-shadow: 0 2px 12px #b6f5c955;
+}
+.contact-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.contact-info {
+    flex: 1 1 60%;
+    padding: 0 32px;
+}
+
+.contact-img {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+.contact-img img {
+    max-width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px #6edc8c88;
+    background: #fff;
+}
+
+.contact-container h2 {
+    color: #1fa463;
+    margin-top: 0;
+}
+
+.nintendo-logo {
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #b6f5c9;
+}
+
+@media (max-width: 700px) {
+    .contact-row, .contact-row.reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .contact-info {
+        padding: 16px 0;
+    }
+    .contact-img {
+        margin-bottom: 16px;
+    }
+}

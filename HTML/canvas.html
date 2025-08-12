@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="../CSS/canvas.css">
+    <link rel="stylesheet" href="../CSS/estandar.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-top">
+                <img id="logo" src="../Recursos/Imagenes/Logos/LineartColor_Logo.jpg" alt="Logo Lineart & Color" class="nav-logo">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <a href="https://www.facebook.com/profile.php?id=100064456823691" class="nav-social" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="../Recursos/Imagenes/Icon/facebook.png" alt="Facebook"/></a>
+                    <a href="#" class="nav-social" title="YouTube" target="_blank" rel="noopener noreferrer"><img src="../Recursos/Imagenes/Icon/youtube.png" alt="YouTube"/></a>
+                    <a href="https://www.instagram.com/lineart_and_color/" class="nav-social" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="../Recursos/Imagenes/Icon/instagram.png" alt="Instagram"/></a>
+                    <div class="nav-user">
+                        <img src="../Recursos/Imagenes/Icon/user_icon.png" alt="Usuario" class="user-icon">
+                        <span class="user-name">Invitado</span>
+                        <button class="login-btn" onclick="location.href='login.html'">Log In</button>
+                        <button class="signup-btn" onclick="location.href='signup.html'">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center">
+                <a href="index.html"><span>Inicio</span></a>
+                <a href="game.html"><span>Juego</span></a>
+                <a href="gallery.html"><span>Galería</span></a>
+                <a href="canvas.html" class="active"><span class="active">Pintar</span></a>
+                <a href="#"><span>Comisiones</span></a>
+                <a href="contacto.html"><span>Contactos</span></a>
+            </div>
+        </nav>
+    </header>
+    <div class="paint-container">
+        <!-- Herramientas (izquierda) -->
+        <aside class="tools-panel">
+            <h2 style="font-size: 1.1em; margin-bottom: 8px; color: #417B5A;">Pinceles</h2>
+            <div class="tools-block">
+                <button class="tool-btn" id="tool-brush" data-tool="brush"><img src="../Recursos/Imagenes/Icon/pencil_icon.png" alt="Brocha"></button>
+                <button class="tool-btn" id="tool-eraser" data-tool="eraser"><img src="../Recursos/Imagenes/Icon/erase_icon.png" alt="Borrar"></button>
+                <button class="tool-btn" id="tool-line" data-tool="line"><img src="../Recursos/Imagenes/Icon/line_icon.png" alt="Línea"></button>
+                <button class="tool-btn" id="tool-rect" data-tool="rect"><img src="../Recursos/Imagenes/Icon/square_icon.png" alt="Cuadrado"></button>
+                <button class="tool-btn" id="tool-circle" data-tool="circle"><img src="../Recursos/Imagenes/Icon/circle_icon.png" alt="Círculo"></button>
+                <button class="tool-btn" id="tool-triangle" data-tool="triangle"><img src="../Recursos/Imagenes/Icon/triangle_icon.png" alt="Triángulo"></button>
+            </div>
+            <div class="tools-block" style="margin-top:10px;">
+                <button class="tool-btn sticker-btn" id="sticker-a" data-sticker="../Recursos/Imagenes/Icon/luigi_icon.png" title="Sticker A"><img src="../Recursos/Imagenes/Icon/luigi_icon.png"></button>
+                <button class="tool-btn sticker-btn" id="sticker-b" data-sticker="../Recursos/Imagenes/Icon/mario_icon.png" title="Sticker B"><img src="../Recursos/Imagenes/Icon/mario_icon.png"></button>
+                <button class="tool-btn sticker-btn" id="sticker-c" data-sticker="../Recursos/Imagenes/Icon/link_icon.png" title="Sticker C"><img src="../Recursos/Imagenes/Icon/link_icon.png"></button>
+            </div>
+            <div class="tool-group">
+                <label for="brush-size">Tamaño:</label>
+                <input type="range" id="brush-size" min="1" max="50" value="10">
+            </div>
+            <div class="tool-group">
+                <label for="stroke-color">Contorno:</label>
+                <input type="color" id="stroke-color" value="#000000" style="width:90%;margin:2.25% 5%;">
+                <label for="fill-color">Relleno:</label>
+                <input type="color" id="fill-color" value="#ffffff" style="width:90%;margin:2.25% 5%;">
+            </div>
+            <h3 style="font-size: 1em; margin: 8px 0 2px 0; color: #417B5A;">Filtros</h3>
+            <div class="filters-block">
+                <button class="filter-btn" id="filter-gray" style="background:linear-gradient(90deg,#fff,#888,#000);"></button>
+                <button class="filter-btn" id="filter-negative"></button>
+                <button class="filter-btn" id="filter-red" style="background:#e94f37;"></button>
+                <button class="filter-btn" id="filter-green" style="background:#7bc47f;"></button>
+                <button class="filter-btn" id="filter-blue" style="background:#4a90e2;"></button>
+                <button class="filter-btn" id="filter-none" style="background:#fff;"></button>
+            </div>
+            <div class="tool-group">
+                <button id="download-btn">Descargar</button>
+                <button id="clear-btn" style="background:#fff;color:#222;border:2px solid #b88a4a;margin-top:8px;">Limpiar canvas</button>
+                <button id="upload-gallery-btn" style="background:#7bc47f;color:#fff;border:2px solid #417B5A;margin-top:8px;">Subir a galería</button>
+            </div>
+        </aside>
+        <!-- Canvas (centro) -->
+        <main class="canvas-panel">
+            <canvas id="paint-canvas" width="700" height="700"></canvas>
+        </main>
+        <!-- Previews y drag & drop (derecha) -->
+        <aside class="preview-panel">
+            <h2 style="font-size: 1.1em; margin-bottom: 8px; color: #417B5A;">Imágenes</h2>
+            <div class="preview-group">
+                <div id="img-preview" class="img-preview"></div>
+                <button id="img-upload-btn" class="img-upload-btn">Agregar IMG</button>
+                <input type="file" id="img-upload" accept="image/*">
+            </div>
+            <h3 style="font-size: 1em; margin: 8px 0 2px 0; color: #417B5A;">IMG<br>Drag and Drop</h3>
+            <div class="preview-group">
+                <div id="draggable-images" class="draggable-images"></div>
+                <button id="add-draggable-btn">Agregar IMG</button>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>©Copyright 2025 Luigi Tower Jump - Proyecto Universitario<br>
+        Realizado por "Jorge Anibal Espinosa Perales - 168768"<br>
+        Universidad Autonoma de Ciudad Juarez<br>
+        Todos los derechos reservados a Nintendo. <a href="https://www.nintendo.com/" target="_blank" rel="noopener noreferrer">Sitio Oficial Nintendo</a>
+        </p>
+    </footer>
+    <script src="../JS/recursos.js"></script>
+    <script src="../JS/usuario.js"></script>
+    <script src="../JS/formulario.js"></script>
+    <script src="../JS/canvas.js"></script>
+    <script src="../JS/switch.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+// HISTORIAL DE CONVERSACIÓN - PROYECTO LINEART & COLOR
+====================================================
+
+Resumen de la conversación y desarrollo con GitHub Copilot (hasta 26 de mayo de 2025):
+
+---
+
+1. **Inicio del proyecto:**
+   - Creación de un editor de pintura en canvas (Phaser 3, HTML/JS/CSS) con herramientas de brocha, borrador, línea, cuadrado, círculo, triángulo y stickers.
+   - Encapsulamiento de variables y solución de errores de declaración duplicada.
+   - Implementación de selección visual de herramienta activa y lógica de color de relleno para figuras.
+   - Filtros visuales aplicados solo al canvas, con restauración y sin perder dibujos.
+
+2. **Botones principales:**
+   - "Limpiar canvas" borra todo el canvas y lo deja en blanco.
+   - "Descargar" guarda el dibujo como .jpg con fondo blanco.
+   - Ambas funciones en formulario.js.
+
+3. **Galería tipo Instagram:**
+   - Botón "Subir a galería" guarda el dibujo en localStorage.
+   - gallery.html, gallery.js y gallery.css muestran galería en grilla responsive, con imágenes de ejemplo y subidas.
+   - Modal para ver imagen ampliada y efecto hover.
+   - Nav profesional con logo, redes, usuario y navegación inferior.
+
+4. **Organización y estructura:**
+   - Archivos: canvas.html, gallery.html, game.html, index.html, canvas.js, formulario.js, gallery.js, recursos.js, canvas.css, gallery.css, estandar.css, menu.css, game.css.
+   - Recursos: imágenes, iconos, fondos, sonidos.
+
+5. **Sistema de usuarios:**
+   - login.html y signup.html con validación visual, mensajes de error y precarga de usuario de prueba.
+   - Autenticación y galería personalizada por usuario.
+   - Icono de usuario dinámico (guest/user).
+
+6. **Mejoras visuales y responsividad:**
+   - Nav profesional replicado en todas las páginas (excepto login/signup), con clase active para resaltar la página actual.
+   - Centrado y alineación de botones y paneles con flexbox y grid.
+   - Paneles laterales del canvas scrolleables, footer siempre visible sin tapar contenido.
+   - Ajustes de separación y márgenes para experiencia profesional.
+
+7. **Portabilidad y control de versiones:**
+   - Instrucciones para subir el proyecto a GitHub privado.
+   - Recomendación de guardar historial y documentación en archivos txt.
+
+8. **Últimos cambios (21/05/2025):**
+   - Nav actualizado con clase active según la página.
+   - Footer ajustado para no tapar contenido.
+   - Panel de herramientas scrolleable y siempre accesible.
+   - Mejoras de separación y responsividad en todos los paneles.
+   - Preparación de documentación para portabilidad.
+
+9. **Mejoras en contacto.html (25/05/2025):**
+   - Se crea un wrapper exclusivo para contacto.html para extender el ancho del contenido y alinearlo con header/footer.
+   - El nav y footer ahora son idénticos y consistentes con el resto del sitio.
+   - Estilos de contacto aislados en estandar.css para no afectar otras páginas.
+   - Documentación (ELEMENTOS.txt, README.txt) actualizada para reflejar estos cambios.
+
+10. **Actualización global (26/05/2025):**
+   - Nav profesional y footer replicados en todas las páginas principales (excepto login/signup), con clase active.
+   - Footer siempre visible y consistente.
+   - Menú principal (index.html) visual tipo grid, responsivo, con recuadros horizontales, icono a la izquierda y resumen a la derecha, efecto hover.
+   - Validación visual y mensajes claros en login/signup.
+   - Galería personalizada: invitados ven ejemplos, usuarios logueados ven solo sus imágenes.
+   - Botón "Subir a galería" solo para usuarios logueados.
+   - Modal para ver imágenes ampliadas en galería.
+   - Paneles laterales del canvas scrolleables.
+   - Wrapper exclusivo en contacto.html alineado con header/footer.
+   - Advertencia: falta el ícono gallery.png en Recursos/Imagenes/Icon/.
+   - Portabilidad: documentación y estructura lista para migrar o subir a GitHub.
+   - Lógica y experiencia de usuario replicada del juego a otras secciones donde aplica.
+
+11. **Cambios en game.html, game.css y game.js (26/05/2025):**
+   - Se integró el minijuego Luigi Tower Jump usando Phaser 3.
+   - Nav profesional y footer replicados, con clase active y consistencia visual.
+   - Modal de instrucciones con controles visuales y animaciones de Luigi.
+   - Iconos de música y pausa interactivos, controlados desde JS.
+   - Experiencia de usuario mejorada: usuario dinámico, botones de login/signup/logout, actualización visual del usuario.
+   - Estilos exclusivos en game.css para el área de juego, responsivo y visualmente integrado.
+   - Lógica de juego, animaciones, puntaje, plataformas, música, pausa y eventos de usuario gestionados en game.js.
+
+---
+
+**Fin del historial hasta la fecha.**

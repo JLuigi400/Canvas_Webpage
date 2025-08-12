@@ -1,0 +1,84 @@
+/* ====== DATA.CSS ====== */
+/* Estilos exclusivos para formularios de login, registro y mensajes de error */
+
+.form-container {
+    background: #fff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 32px 24px 24px 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(70,130,180,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 18px;
+}
+
+.form-container h2 {
+    color: #4682B4;
+    margin-bottom: 18px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.6rem;
+}
+label {
+    display: block;
+    margin: 12px 0 4px 0;
+    color: #35648a;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #b3d1ea;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: #f7fbfd;
+    transition: border 0.2s;
+}
+input:focus {
+    border: 1.5px solid #4682B4;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #4682B4;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-family: 'Luckiest Guy', cursive;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #35648a;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+    display: block;
+    min-height: 18px;
+}
+
+.switch-link {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: #222;
+}
+.switch-link a {
+    color: #4682B4;
+    text-decoration: underline;
+}

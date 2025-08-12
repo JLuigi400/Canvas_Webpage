@@ -1,0 +1,264 @@
+/* ====== ESTILOS GLOBALES Y LAYOUT GENERAL ====== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Luckiest+Guy&display=swap');
+
+body, html, * {
+    font-family: 'Press Start 2P', Arial, sans-serif !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    text-align: center;
+    padding: 1%;
+}
+p {
+    margin: 0 2.5%;
+}
+
+/* Header y Footer globales */
+header {
+    background-color: #4682B4;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 15px;
+    width: 98%;
+    margin: 0 1%;
+}
+footer {
+    background-color: #4682B4;
+    text-align: center;
+    border-radius: 15px;
+    width: 96%;
+    margin: 0 1%;
+    padding: 0.75%;
+    font-family: 'Luckiest Guy', Arial, sans-serif !important;
+    position: static;
+    z-index: 1;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.paint-container {
+    flex: 1 1 auto;
+}
+
+/* Utilidades */
+.score-yellow, .gameover-yellow {
+    color: #ffcc00 !important;
+    text-shadow: 2px 2px 4px #000 !important;
+}
+
+/* ====== NAVBAR PRINCIPAL ====== */
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #4682B4;
+    padding: 0 18px 8px 18px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2px;
+    gap: 2%;
+}
+.nav-logo {
+    height: 48px;
+    margin: 8px 0 0 0;
+    margin-right: 2%;
+    border-radius: 12px;
+    background: #fff2c7;
+    box-shadow: 0 2px 8px #b88a4a22;
+}
+.nav-social {
+    display: inline-block;
+}
+.nav-social img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff2c7;
+    margin: 0 2px;
+    box-shadow: 0 1px 4px #b88a4a22;
+    transition: background 0.2s;
+}
+.nav-social img:hover {
+    background: #ffd166;
+}
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+}
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eafff2;
+    border: 2px solid #1fa463;
+}
+.user-name {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    color: #fff;
+    font-size: 0.95em;
+    margin: 0 4px;
+}
+.login-btn, .signup-btn {
+    background: #7bc47f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-size: 0.9em;
+    margin-left: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.login-btn:hover, .signup-btn:hover {
+    background: #ffd166;
+    color: #222;
+}
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0.5vw;
+    gap: 0.5vw;
+}
+.nav-center a {
+    flex: 1 1 0;
+    text-align: center;
+    text-decoration: none;
+    height: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-center span {
+    display: inline-block;
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 45px;
+}
+.nav-center a.active span,
+nav.main-nav .nav-center a:focus span {
+    background: #7bc47f;
+    color: #222;
+}
+.nav-center a span:hover {
+    background: #35648a;
+    color: #fff;
+}
+
+/* Botones generales */
+button, .logout-btn, .login-btn, .signup-btn {
+    font-size: 1.1em;
+    padding: 0.7em 1.5em;
+    border-radius: 8px;
+    border: none;
+    margin: 0.3em 0.1em;
+    background: #4682B4;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Luckiest Guy', cursive;
+    cursor: pointer;
+}
+button:active, .logout-btn:active, .login-btn:active, .signup-btn:active {
+    background: #7bc47f;
+    color: #222;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive nav/footer */
+@media (max-width: 900px) {
+    .main-nav {
+        padding: 0 4px 8px 4px;
+    }
+    .nav-logo {
+        height: 36px;
+    }
+    .nav-center {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .nav-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+/* Utilidad: panel de referencia (canvas, drag-and-drop) */
+.panel-block {
+    width: 320px;
+    max-width: 95vw;
+    min-width: 220px;
+    background: #f7f7fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #b88a4a22;
+    margin: 0 auto 18px auto;
+    padding: 18px 16px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.panel-block button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+/* Contacto: solo fondo y layout general */
+body.contacto {
+    background: linear-gradient(135deg, #b6f5c9 0%, #6edc8c 100%);
+    color: #222;
+}
+
+/* Botón volver al inicio (login/signup) */
+#back-to-index {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#back-to-index img {
+    width: 44px;
+    height: 44px;
+    filter: drop-shadow(0 1px 2px #2222);
+}
+#back-to-index span {
+    color: #4682B4;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+}
