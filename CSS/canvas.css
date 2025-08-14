@@ -245,3 +245,6 @@
     align-items: center;
     margin-bottom: 12px;
 }
+.canvas{
+    position:sticky;
+}

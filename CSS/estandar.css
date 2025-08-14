@@ -19,7 +19,7 @@ p {
 
 /* Header y Footer globales */
 header {
-    background-color: #4682B4;
+    background-color: #000000;
     padding: 15px 0;
     text-align: center;
     border-radius: 15px;
@@ -27,15 +27,18 @@ header {
     margin: 0 1%;
 }
 footer {
-    background-color: #4682B4;
+    color: #f2f2ed;
+    background-color: #000000;
     text-align: center;
     border-radius: 15px;
     width: 96%;
     margin: 0 1%;
     padding: 0.75%;
+    font-size: 0.5em;
     font-family: 'Luckiest Guy', Arial, sans-serif !important;
-    position: static;
     z-index: 1;
+    bottom: 0;
+    position: fixed;
 }
 
 body {
@@ -47,18 +50,12 @@ body {
     flex: 1 1 auto;
 }
 
-/* Utilidades */
-.score-yellow, .gameover-yellow {
-    color: #ffcc00 !important;
-    text-shadow: 2px 2px 4px #000 !important;
-}
-
 /* ====== NAVBAR PRINCIPAL ====== */
 .main-nav {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: #4682B4;
+    background: #000000;
     padding: 0 18px 8px 18px;
     border-radius: 15px;
     margin-bottom: 12px;
@@ -76,8 +73,6 @@ body {
     margin: 8px 0 0 0;
     margin-right: 2%;
     border-radius: 12px;
-    background: #fff2c7;
-    box-shadow: 0 2px 8px #b88a4a22;
 }
 .nav-social {
     display: inline-block;
@@ -85,8 +80,6 @@ body {
 .nav-social img {
     width: 28px;
     height: 28px;
-    border-radius: 50%;
-    background: #fff2c7;
     margin: 0 2px;
     box-shadow: 0 1px 4px #b88a4a22;
     transition: background 0.2s;
@@ -104,8 +97,8 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #eafff2;
-    border: 2px solid #1fa463;
+    background: #f2f2ed;
+    border: 2px solid #ff1b50;
 }
 .user-name {
     font-family: 'Press Start 2P', Arial, sans-serif;
@@ -115,7 +108,7 @@ body {
 }
 .login-btn, .signup-btn {
     background: #7bc47f;
-    color: #fff;
+    color: #f2f2ed;
     border: none;
     border-radius: 8px;
     padding: 4px 12px;
@@ -126,8 +119,8 @@ body {
     transition: background 0.2s;
 }
 .login-btn:hover, .signup-btn:hover {
-    background: #ffd166;
-    color: #222;
+    background: #ff1b50;
+    color: #f2f2ed;
 }
 .nav-center {
     display: flex;
@@ -153,21 +146,19 @@ body {
     font-size: 1.1em;
     border-radius: 10px;
     background: transparent;
-    color: #fff;
+    color: #f2f2ed;
     transition: background 0.2s, color 0.2s;
-    font-family: 'Press Start 2P', Arial, sans-serif;
-    font-weight: 400;
     letter-spacing: 0.5px;
     margin-top: 45px;
 }
 .nav-center a.active span,
 nav.main-nav .nav-center a:focus span {
-    background: #7bc47f;
-    color: #222;
+    background: #ff1b50;
+    color: #f2f2ed;
 }
 .nav-center a span:hover {
-    background: #35648a;
-    color: #fff;
+    background: #ff1b50;
+    color: #f2f2ed;
 }
 
 /* Botones generales */
@@ -177,15 +168,15 @@ button, .logout-btn, .login-btn, .signup-btn {
     border-radius: 8px;
     border: none;
     margin: 0.3em 0.1em;
-    background: #4682B4;
-    color: #fff;
+    background: #000000;
+    color: #f2f2ed;
     transition: background 0.2s, color 0.2s;
     font-family: 'Luckiest Guy', cursive;
     cursor: pointer;
 }
 button:active, .logout-btn:active, .login-btn:active, .signup-btn:active {
-    background: #7bc47f;
-    color: #222;
+    background: #ff1b50;
+    color: #f2f2ed;
 }
 button:disabled {
     opacity: 0.5;
@@ -216,7 +207,7 @@ button:disabled {
     width: 320px;
     max-width: 95vw;
     min-width: 220px;
-    background: #f7f7fa;
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 8px #b88a4a22;
     margin: 0 auto 18px auto;
@@ -235,7 +226,7 @@ button:disabled {
 /* Contacto: solo fondo y layout general */
 body.contacto {
     background: linear-gradient(135deg, #b6f5c9 0%, #6edc8c 100%);
-    color: #222;
+    color: #f2f2ed;
 }
 
 /* Botón volver al inicio (login/signup) */
